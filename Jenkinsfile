@@ -1,6 +1,8 @@
 node {
    def mvnHome
    stage('Preparation') { // for display purposes
+      // clean the workspace
+      deleteDir()
       // Get some code from a GitHub repository
       sh 'git clone https://duemir.visualstudio.com/_git/maven-samples .'
       // Get the Maven tool.
