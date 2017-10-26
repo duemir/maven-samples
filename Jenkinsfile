@@ -1,5 +1,4 @@
-echo "Hello Causes Pipeline!"
-echo "Actions Dump: ${currentBuild.rawBuild.actions.dump()}"
+echo "Hello Actions Pipeline!"
 currentBuild.rawBuild.getActions(jenkins.scm.api.SCMRevisionAction).eachWithIndex { a, i ->
-    echo "SCM Action ${i}: ${a.dump()}"
+    echo "SCM Action ${i}, revision is: ${a.revision}"
 }
