@@ -1,1 +1,1 @@
-println currentBuild.rawBuild.cause.dump()
+println currentBuild.rawBuild.causes.dump()
