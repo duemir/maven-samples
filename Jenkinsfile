@@ -1,2 +1,2 @@
 echo "Hello Causes Pipeline!"
-echo "Causes Dump: ${currentBuild.rawBuild.causes.dump()}"
+echo "Actions Dump: ${currentBuild.rawBuild.actions.dump()}"
