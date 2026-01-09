@@ -1,0 +1,20 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: Test Private ECR Access accross orgs
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+jobs:
+  build:
+    permissions:
+      id-token: write
+    steps:
+      - name: Say hello
+        uses: docker://063356183961.dkr.ecr.us-east-1.amazonaws.com/ubi/unified-distribution/agent:2.541.1.35560
+        shell: sh
+        run: |
+          echo "hello world"
+          id
+          env
